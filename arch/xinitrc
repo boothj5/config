@@ -1,0 +1,22 @@
+# The following variable defines the session which is started if the user doesn't explicitly select a session
+# Source: http://svn.berlios.de/svnroot/repos/slim/trunk/xinitrc.sample
+
+DEFAULT_SESSION=startkde
+
+case $1 in
+kde)
+    exec ck-launch-session startkde
+    ;;
+awesome)
+	setxkbmap -layout gb
+    xcompmgr &
+    exec ck-launch-session awesome
+    ;;
+*)
+    exec ck-launch-session $DEFAULT_SESSION
+    ;;
+esac
+
+
+#exec ck-launch-session startkde
+#exec ck-launch-session awesome
