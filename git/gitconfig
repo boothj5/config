@@ -1,8 +1,9 @@
+[user]
+	name = James Booth
+	email = boothj5@gmail.com
 [core]
 	editor = vim
 [alias]
-    glog = log --oneline --decorate --graph
-    down = pull origin master
-    up = push origin master
-    ds = diff --stat
-    dshub = diff --stat origin/master
+    glog = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[color]
+	ui = true
